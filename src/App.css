@@ -1,38 +1,109 @@
-.App {
-  text-align: center;
-}
+/* $font-inter: url("/path/to/inter/font/Inter-Regular.ttf"); */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@mixin breakpoint($point) {
+  @if $point == mobile {
+    @media (min-width: 320px) and (max-width: 680px) {
+      @content;
+    }
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  @include font-inter;
+}
+
+.app {
+  max-width: 1720px;
+  height: 1220px;
+  margin: 0 auto;
+}
+.box {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  flex-direction: row;
+  background-color: red;
+}
+.background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 1220px;
+  background-color: aqua;
+}
+
+.background1 {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.login {
+  position: absolute;
+  /* Thêm các thuộc tính CSS tùy ý cho ảnh login */
+}
+
+.login1 {
+  margin-left: 180px;
+  width: 50%;
+}
+
+button {
+  background-color: #e3f1fe;
+  width: 559px;
+  border-radius: 14px;
+  height: 71px;
+  margin-top: 30px;
+  font-size: 16px;
+}
+
+.button-facebook {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Responsive Styles */
+
+@media screen and (max-width: 700px) {
+  .app {
+    /* visibility: hidden; */
+    /* overflow-x: hidden; */
+    /* width: 400px; */
+    /* margin-top: -800px; */
+    max-width: 785px;
+    /* margin-left: -1000px; */
+    /* height: auto; */
   }
-  to {
-    transform: rotate(360deg);
+  .box {
+    display: initial;
+    justify-content: initial;
+    flex-direction: initial;
+  }
+  .background {
+    display: initial;
+    justify-content: initial;
+    flex-direction: initial;
+    /* display: none; */
+    width: 0px;
+    background-color: red;
+  }
+  .background1 {
+    display: none;
+  }
+  .login {
+    display: none;
+  }
+  .login1 {
+    /* margin-left: -170px; */
+    /* width: 100%; */
+  }
+
+  button {
+    width: 100%;
   }
 }
