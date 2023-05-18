@@ -21,7 +21,7 @@ body {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  background-color: red;
+  /* background-color: red; */
 }
 .background {
   display: flex;
@@ -29,7 +29,7 @@ body {
   align-items: center;
   width: 50%;
   height: 1220px;
-  background-color: aqua;
+  /* background-color: aqua; */
 }
 
 .background1 {
