@@ -13,7 +13,6 @@ const FormCreate = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [confirmpassword, setConfirmPassword] = useState("");
-    const [userData, setUserData] = useState({});
     const [localStorageChange, setLocaclStorageChange] = useState(false);
 
     useEffect(() => {
@@ -21,7 +20,6 @@ const FormCreate = () => {
 
         if (existingData && typeof existingData === "string") {
             const parsedData = JSON.parse(existingData);
-            setUserData(parsedData);
         }
     }, [localStorageChange]);
 
