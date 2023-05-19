@@ -53,11 +53,7 @@ const FormCreate = () => {
 
         localStorage.setItem("mydata", JSON.stringify(newUserData));
         // setUserData(newUserData);
-        setFirstName("");
-        setLastName("");
-        setEmail("");
-        setPassword("");
-        setConfirmPassword("");
+
 
         // Cập nhật flag để thông báo thay đổi trong local storage
         setLocaclStorageChange(!localStorageChange);
