@@ -1,0 +1,112 @@
+.container {
+  .login {
+    font-weight: 700;
+    font-size: 43px;
+    line-height: 54px;
+    margin-top: 101px;
+  }
+  .account {
+    font-size: 29px;
+    font-weight: 500;
+  }
+  form {
+    .email {
+      font-size: 22px;
+      font-weight: 400;
+      color: #207198;
+    }
+    .input {
+      position: relative;
+      z-index: 1;
+      display: inline-block;
+
+      img {
+        width: 22px;
+        height: 15px;
+        position: absolute;
+        top: 50%;
+        padding-right: 15px;
+        right: 5px; /* Khoảng cách từ bên phải */
+        transform: translate(0, -50%);
+        cursor: pointer;
+      }
+    }
+    input {
+      font-size: 25px;
+      padding-left: 10px;
+      width: 560px;
+      height: 71px;
+      border: 2.38px solid #207198;
+      border-radius: 15px;
+
+      // margin-bottom: 31px;
+    }
+
+    button {
+      margin-top: 33px;
+      width: 580px;
+      height: 71px;
+      background-color: #fe904b;
+      border-radius: 15px;
+      border: 2.38px solid #ee5757;
+      font-size: 33px;
+      color: white;
+    }
+    .or {
+      // style={{ width: "560px", textAlign: "center", fontSize: "28px", fontWeight: "700", lineHeight: "34px" }}
+      width: 560px;
+      text-align: center;
+      font-size: 28px;
+      // font-size: ;
+      font-weight: 700;
+      line-height: 34px;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    // margin: 0 auto;
+    // background-color: red;
+    // margin-right: 15px;
+    // margin-left: 15px;
+    .login {
+      font-weight: 700;
+      font-size: 26px;
+      line-height: 45px;
+    }
+    .account {
+      font-size: 15px;
+      font-weight: 500;
+    }
+    form {
+      .email {
+        font-size: 16px;
+        font-weight: 400;
+      }
+      input {
+        width: 300px;
+        height: 60px;
+        font-size: 19px;
+        // font-size: 29px;
+        border: 2.38px solid #207198;
+        border-radius: 15px;
+      }
+      button {
+        width: 306px;
+        height: 60px;
+        color: white;
+        font-size: 16px;
+      }
+      .or {
+        // style={{ width: "560px", textAlign: "center", fontSize: "28px", fontWeight: "700", lineHeight: "34px" }}
+        width: 300px;
+        text-align: center;
+        font-size: 22px;
+        // font-size: ;
+        font-weight: 700;
+        line-height: 34px;
+      }
+    }
+  }
+}

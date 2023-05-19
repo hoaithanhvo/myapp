@@ -1,0 +1,77 @@
+body {
+  // overflow-x: hidden;
+}
+.app {
+  color: #0e4a67;
+  max-width: 1720px;
+  height: 1220px;
+  margin: 0 auto;
+  .box {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    .background {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      height: 1220px;
+      .background1 {
+        position: absolute;
+        top: 20s;
+        left: 20s;
+        width: 655px;
+        height: 682px;
+      }
+
+      .login {
+        position: absolute;
+      }
+    }
+    .main {
+      .button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 580px;
+        max-width: 1100px;
+        margin-bottom: 30px;
+        background-color: #e3f1fe;
+        border-radius: 15px;
+        border: 2.38px solid #207198;
+        height: 72px;
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: 400;
+        span {
+          color: #207198;
+          margin-left: 35px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .app {
+    // background-color: #207198;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    .box {
+      .main {
+        // background-color: red;
+        .button {
+          width: 306px;
+        }
+      }
+    }
+  }
+
+  .login,
+  .background1,
+  .background,
+  .box {
+    display: none;
+  }
+}
