@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from 'react'
+import React, { useState, useContext } from 'react'
 import { Link } from 'react-router-dom'
 import styles from "./FormCreate.module.scss"
 import { ThemeContext } from '../ThereProvider'
@@ -12,17 +12,17 @@ const FormCreate = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [confirmpassword, setConfirmPassword] = useState("");
-    const [userData, setUserData] = useState({});
+    // const [userData, setUserData] = useState({});
     const [localStorageChange, setLocaclStorageChange] = useState(false);
 
-    useEffect(() => {
-        const existingData = localStorage.getItem("mydata");
+    // useEffect(() => {
+    //     const existingData = localStorage.getItem("mydata");
 
-        if (existingData && typeof existingData === "string") {
-            const parsedData = JSON.parse(existingData);
-            setUserData(parsedData);
-        }
-    }, [localStorageChange]);
+    //     if (existingData && typeof existingData === "string") {
+    //         const parsedData = JSON.parse(existingData);
+    //         setUserData(parsedData);
+    //     }
+    // }, [localStorageChange]);
 
     const handle = (e) => {
         e.preventDefault();
@@ -52,7 +52,7 @@ const FormCreate = () => {
         };
 
         localStorage.setItem("mydata", JSON.stringify(newUserData));
-        setUserData(newUserData);
+        // setUserData(newUserData);
         setFirstName("");
         setLastName("");
         setEmail("");
@@ -63,7 +63,7 @@ const FormCreate = () => {
         setLocaclStorageChange(!localStorageChange);
         alert("Chúc mừng bạn đã tạo tài khoản thành công")
     };
-    console.log(userData);
+    // console.log(userData);
     return (
 
 
