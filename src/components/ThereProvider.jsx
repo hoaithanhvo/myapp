@@ -1,5 +1,5 @@
 // import React from 'react'
-import React, { useEffect, useState, createContext } from 'react'
+import React, { useState, createContext } from 'react'
 const ThemeContext = createContext()
 function ThereProvider({ children }) {
   const [firstname, setFirstName] = useState("");

@@ -10,7 +10,7 @@ function CreateAccount() {
         <div className={styles.app}>
             <div className={styles.box}>
                 <div className={styles.background}>
-                    <img className={styles.background1} src={background}>
+                    <img className={styles.background1} src={background} alt=''>
                     </img>
                     <img className={styles.login} src={login} alt=""></img>
                 </div>
